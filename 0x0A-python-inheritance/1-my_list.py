@@ -1,4 +1,6 @@
-s module contains `MyList` class."""
+#!/usr/bin/python3
+
+"""This module contains `MyList` class."""
 
 
 class MyList(list):
