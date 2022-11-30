@@ -1,14 +1,15 @@
 #!/usr/bin/node
-// JS Script
 
-let num = parseInt(process.argv[2]);
+const size = parseInt(process.argv[2]);
 
-if (num) {
-  for (let i = 0; i < num; i++) {
-    console.log('X'.repeat(num));
-  }
-} else if (num < 0) {
-  console.log('');
-} else {
+if (isNaN(size)) {
   console.log('Missing size');
+} else {
+  for (let row = 0; row < size; row++) {
+    let line = '';
+    for (let col = 0; col < size; col++) {
+      line += 'X';
+    }
+    console.log(line);
+  }
 }
